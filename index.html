@@ -32,6 +32,13 @@
                 <p><strong>GitHub:</strong> <a href="https://github.com/hagai1973?tab=repositories"
                         target="_blank">github.com/hagai1973</a> <i class="fab fa-github"></i></p>
             </div>
+
+            <div class="like-section">
+                <button class="like-btn" id="like-btn" onclick="handleLike()">
+                    <i class="fas fa-thumbs-up" id="like-icon"></i>
+                </button>
+                <span class="like-count" id="like-count">...</span>
+            </div>
         </div>
 
         <hr />
@@ -69,6 +76,68 @@
             </a>
         </footer>
     </div>
+
+    <script>
+        const NS = 'hagai-tregerman-portfolio';
+        const KEY = 'likes';
+        let busy = false;
+
+        function localGet() {
+            return parseInt(localStorage.getItem('likeCount') || '0');
+        }
+        function localSet(val) {
+            localStorage.setItem('likeCount', val);
+        }
+
+        async function getCount() {
+            try {
+                const r = await fetch(`https://api.countapi.xyz/get/${NS}/${KEY}`);
+                const d = await r.json();
+                return Math.max(d.value || 0, localGet());
+            } catch {
+                return localGet();
+            }
+        }
+
+        async function hitCount() {
+            try {
+                const r = await fetch(`https://api.countapi.xyz/hit/${NS}/${KEY}`);
+                const d = await r.json();
+                const val = Math.max(d.value || 0, localGet() + 1);
+                localSet(val);
+                return val;
+            } catch {
+                const val = localGet() + 1;
+                localSet(val);
+                return val;
+            }
+        }
+
+        async function handleLike() {
+            if (busy) return;
+            busy = true;
+
+            const icon = document.getElementById('like-icon');
+            const btn = document.getElementById('like-btn');
+            const countEl = document.getElementById('like-count');
+
+            icon.className = 'fas fa-heart';
+            btn.classList.add('liked');
+
+            const newCount = await hitCount();
+            countEl.textContent = newCount;
+
+            setTimeout(() => {
+                icon.className = 'fas fa-thumbs-up';
+                btn.classList.remove('liked');
+                busy = false;
+            }, 2000);
+        }
+
+        getCount().then(c => {
+            document.getElementById('like-count').textContent = c;
+        });
+    </script>
 </body>
 
 </html>
