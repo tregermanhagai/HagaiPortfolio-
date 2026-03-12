@@ -1,0 +1,100 @@
+.page-top-img {
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+.linkedin-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0073b1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.linkedin-all:hover {
+    text-decoration: underline;
+}
+
+.rec-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.rec-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px 24px;
+    background: #f9f9f9;
+    transition: box-shadow 0.2s;
+}
+
+.rec-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 115, 177, 0.15);
+}
+
+.rec-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.rec-avatar {
+    flex-shrink: 0;
+    font-size: 48px;
+    color: #0073b1;
+    line-height: 1;
+}
+
+.rec-info h4 {
+    margin: 0 0 3px 0;
+    color: #0073b1;
+    font-size: 1.05em;
+}
+
+.rec-info .rec-headline {
+    margin: 0 0 4px 0;
+    color: #444;
+    font-size: 0.9em;
+}
+
+.rec-info .rec-relation {
+    margin: 0;
+    color: #888;
+    font-size: 0.82em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rec-body p {
+    margin: 0 0 10px 0;
+    color: #444;
+    font-size: 0.93em;
+    line-height: 1.65;
+}
+
+.rec-body p:last-child {
+    margin-bottom: 0;
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .page-top-img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .rec-avatar {
+        font-size: 36px;
+    }
+}
