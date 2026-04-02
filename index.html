@@ -82,6 +82,56 @@
     </div>
 
     <script>
+        // ── Typing animation ──────────────────────────────────────────
+        // sleep(ms): pause execution for ms milliseconds
+        const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+        // type(el, text, speed): adds one character at a time to el
+        // The .typing-cursor class makes the blinking | appear via CSS
+        async function type(el, text, speed) {
+            el.classList.add('typing-cursor');
+            for (let i = 0; i <= text.length; i++) {
+                el.textContent = text.slice(0, i);
+                await sleep(speed);
+            }
+            el.classList.remove('typing-cursor');
+        }
+
+        // erase(el, speed): removes one character at a time from el
+        async function erase(el, speed) {
+            el.classList.add('typing-cursor');
+            const text = el.textContent;
+            for (let i = text.length; i >= 0; i--) {
+                el.textContent = text.slice(0, i);
+                await sleep(speed);
+            }
+            el.classList.remove('typing-cursor');
+        }
+
+        // Main loop: type h1 → wait 2s → type h2 → wait 10s → erase both → repeat
+        async function typingLoop() {
+            const h1 = document.querySelector('h1');
+            const h2 = document.querySelector('h2');
+            const H1_TEXT = 'Hagai Tregerman';
+            const H2_TEXT = 'Senior Tech Lead & Scrum Master And AI Application Architect';
+
+            h1.textContent = '';
+            h2.textContent = '';
+
+            while (true) {
+                await type(h1, H1_TEXT, 80);       // type h1 at 80ms/char
+                await sleep(2000);                  // wait 2 seconds
+                await type(h2, H2_TEXT, 45);        // type h2 at 45ms/char
+                await sleep(10000);                 // wait 10 seconds
+                await erase(h2, 25);                // erase h2 at 25ms/char
+                await erase(h1, 40);                // erase h1 at 40ms/char
+                await sleep(500);                   // brief pause before restart
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', typingLoop);
+        // ─────────────────────────────────────────────────────────────
+
         const NS = 'hagai-tregerman-portfolio';
         const KEY = 'likes';
         const BASE = 207;

@@ -20,12 +20,25 @@ body {
 h1 {
     margin-bottom: 5px;
     color: #0073b1; /* LinkedIn Blue */
+    min-height: 1.2em;
+}
+
+/* Blinking cursor shown on whichever element is actively being typed */
+.typing-cursor::after {
+    content: '|';
+    color: #0073b1;
+    animation: blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    50% { opacity: 0; }
 }
 
 h2 {
     font-weight: 300;
     color: #666;
     margin-top: 0;
+    min-height: 1.4em;
 }
 
 .profile-section {
