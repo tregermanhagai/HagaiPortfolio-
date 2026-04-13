@@ -13,7 +13,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-STGXZCRE47"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-STGXZCRE47');
     </script>
@@ -27,57 +27,65 @@
         <hr />
 
         <main>
-        <div class="profile-section">
-            <img src="./img/ChatGPT Image Feb 26, 2026, 06_58_17 PM.png" alt="Hagai Tregerman" class="profile-img">
+            <div class="profile-section">
+                <img src="./img/ChatGPT Image Feb 26, 2026, 06_58_17 PM.png" alt="Hagai Tregerman" class="profile-img">
 
-            <div class="contact-info">
-                <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/Ganei+Tikva,+Israel"
-                        target="_blank">Ganei Tikva, Israel</a> <i class="fas fa-map-marker-alt"></i></p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/972545966296" target="_blank">054-5966296 </a><i
-                        class="fab fa-whatsapp"></i></p>
-                <p><strong>Email:</strong> <a href="mailto:Hagai.tregerman@gmail.com">Hagai.tregerman@gmail.com </a><i
-                        class="fas fa-envelope"></i></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hagait/"
-                        target="_blank">linkedin.com/in/hagait/</a> <i class="fab fa-linkedin"></i></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/tregermanhagai?tab=repositories"
-                        target="_blank">github.com/tregermanhagai</a> <i class="fab fa-github"></i></p>
-                <p><strong>Sample App:</strong> <a href="https://dogfatheril.dev" target="_blank">dogfatheril.dev</a> <i class="fas fa-bone"></i></p>
+                <div class="contact-info">
+                    <p><strong>Location:</strong> <a href="https://www.google.com/maps/search/Ganei+Tikva,+Israel"
+                            target="_blank">Ganei Tikva, Israel</a> <i class="fas fa-map-marker-alt"></i></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/972545966296" target="_blank">054-5966296
+                        </a><i class="fab fa-whatsapp"></i></p>
+                    <p><strong>Email:</strong> <a href="mailto:Hagai.tregerman@gmail.com">Hagai.tregerman@gmail.com
+                        </a><i class="fas fa-envelope"></i></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hagait/"
+                            target="_blank">linkedin.com/in/hagait/</a> <i class="fab fa-linkedin"></i></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/tregermanhagai?tab=repositories"
+                            target="_blank">github.com/tregermanhagai</a> <i class="fab fa-github"></i></p>
+                    <p><strong>Sample App:</strong> <a href="https://dogfatheril.dev"
+                            target="_blank">dogfatheril.dev</a> <i class="fas fa-bone"></i></p>
+                </div>
+
+                <div class="like-section">
+                    <button class="like-btn" id="like-btn" onclick="handleLike()" aria-label="Like this page">
+                        <i class="fas fa-thumbs-up" id="like-icon" aria-hidden="true"></i>
+                    </button>
+                    <span class="like-count" id="like-count">...</span>
+                </div>
             </div>
 
-            <div class="like-section">
-                <button class="like-btn" id="like-btn" onclick="handleLike()" aria-label="Like this page">
-                    <i class="fas fa-thumbs-up" id="like-icon" aria-hidden="true"></i>
-                </button>
-                <span class="like-count" id="like-count">...</span>
+            <hr />
+
+            <section class="summary">
+                <h3>Professional Summary</h3>
+                <p>Results-driven expert with over 10 years of experience in technical solutions for web and cloud
+                    (AWS).
+                    As a <strong>Senior Software Instructor</strong> at leading tech colleges, I specialize in training
+                    the next generation of QA Engineers in Automation and Manual testing.
+                    I combine my background as a Tech Lead and Scrum Master, AWS Certified Solutions Architect,
+                    Salesforce Expert, and AI Application Architect to help teams and students reach high quality
+                    standards through CI/CD integration and Agile leadership.</p>
+            </section>
+
+            <section class="skills">
+                <h3>Core Competencies</h3>
+                <ul>
+                    <li><strong>Instruction & Mentoring:</strong> Professional QA Instructor, Curriculum Development,
+                        Student Mentoring, and Technical Workshops.</li>
+                    <li><strong>Leadership & Management:</strong> Scrum Master, Tech Lead, Jira Admin, SDLC
+                        Optimization, and Agile Coaching (Scrum/Kanban).</li>
+                    <li><strong>Cloud & DevOps:</strong> AWS, Jenkins, Docker, Git, and Pipeline Scripting.</li>
+                    <li><strong>Programming & Testing:</strong> Python (Pytest), SQL, Java, JavaScript, and Shell
+                        Scripting.</li>
+                </ul>
+            </section>
+
+            <div class="footer">
+                <p>Interested in collaborating?</p>
+                <button onclick="window.open('https://wa.me/972545966296', '_blank')">Get In Touch</button>
+                <button onclick="window.location.href='projects.html'">My Projects Portfolio</button>
+                <button onclick="window.location.href='certifications.html'">Licenses &amp; Certifications</button>
+                <button onclick="window.location.href='recommendations.html'">Recommendations</button>
             </div>
-        </div>
-
-        <hr />
-
-        <section class="summary">
-            <h3>Professional Summary</h3>
-            <p>Results-driven expert with over 10 years of experience in technical solutions for web and cloud (AWS).
-                As a <strong>Senior Software Instructor</strong> at leading tech colleges, I specialize in training the next generation of QA Engineers in Automation and Manual testing.
-                I combine my background as a Tech Lead and Scrum Master, AWS Certified Solutions Architect, Salesforce Expert, and AI Application Architect to help teams and students reach high quality standards through CI/CD integration and Agile leadership.</p>
-        </section>
-
-        <section class="skills">
-            <h3>Core Competencies</h3>
-            <ul>
-                <li><strong>Instruction & Mentoring:</strong> Professional QA Instructor, Curriculum Development, Student Mentoring, and Technical Workshops.</li>
-                <li><strong>Leadership & Management:</strong> Scrum Master, Tech Lead, Jira Admin, SDLC Optimization, and Agile Coaching (Scrum/Kanban).</li>
-                <li><strong>Cloud & DevOps:</strong> AWS, Jenkins, Docker, Git, and Pipeline Scripting.</li>
-                <li><strong>Programming & Testing:</strong> Python (Pytest), SQL, Java, JavaScript, and Shell Scripting.</li>
-            </ul>
-        </section>
-
-        <div class="footer">
-            <p>Interested in collaborating?</p>
-            <button onclick="window.open('https://wa.me/972545966296', '_blank')">Get In Touch</button>
-            <button onclick="window.location.href='projects.html'">My Projects Portfolio</button>
-            <button onclick="window.location.href='certifications.html'">Licenses &amp; Certifications</button>
-            <button onclick="window.location.href='recommendations.html'">Recommendations</button>
-        </div>
 
         </main>
 
@@ -121,8 +129,8 @@
         async function typingLoop() {
             const h1 = document.querySelector('h1');
             const h2 = document.querySelector('h2');
-            const H1_TEXT = 'Hagai Tregerman';
-            const H2_TEXT = 'Senior Tech Lead & Scrum Master And AI Application Architect';
+            const H1_TEXT = h1.textContent;
+            const H2_TEXT = h2.textContent;
 
             h1.textContent = '';
             h2.textContent = '';
