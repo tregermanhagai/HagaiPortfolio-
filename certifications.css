@@ -56,6 +56,12 @@
     color: #0073b1;
 }
 
+.cert-icon-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
 .cert-body h4 {
     margin: 0 0 4px 0;
     color: #0073b1;
