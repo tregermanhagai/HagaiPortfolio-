@@ -154,6 +154,13 @@ button:hover {
     background-color: #005582;
 }
 
+.hebrew-name {
+    font-size: 0.75em;
+    color: #555;
+    font-weight: 400;
+    direction: rtl;
+}
+
 .tech-logos {
     display: flex;
     justify-content: center;
