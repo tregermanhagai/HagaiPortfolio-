@@ -154,6 +154,27 @@ button:hover {
     background-color: #005582;
 }
 
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 28px 0;
+}
+
+.tech-logo {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.tech-logo:hover {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -181,6 +202,27 @@ button:hover {
 
     .like-section {
         margin-left: 0;
+    }
+
+    .tech-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 24px 0;
+    }
+
+    .tech-logo {
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+    }
+
+    .tech-logo:hover {
+        opacity: 1;
     }
 
     .footer {
