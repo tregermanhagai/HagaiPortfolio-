@@ -221,6 +221,12 @@ button:hover {
         gap: 16px;
     }
 
+    .contact-info {
+        width: 100%;
+        min-width: 0;
+        font-size: 14px;
+    }
+
     .contact-info p {
         justify-content: flex-start;
         text-align: left;
@@ -228,6 +234,11 @@ button:hover {
 
     .contact-info p strong {
         min-width: 85px;
+    }
+
+    .contact-info a {
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 
     .like-section {
