@@ -51,6 +51,17 @@
     justify-content: center;
 }
 
+.cert-icon-wrap--wide {
+    width: 120px;
+    height: 56px;
+    background: #fff;
+}
+
+.cert-icon-wrap--wide .cert-icon-img {
+    width: 112px;
+    height: 52px;
+}
+
 .cert-icon {
     font-size: 24px;
     color: #0073b1;
