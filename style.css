@@ -94,6 +94,15 @@ h2 {
     text-decoration: underline;
 }
 
+.summary a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.summary a:hover {
+    text-decoration: underline;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
